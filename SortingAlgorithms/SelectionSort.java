@@ -5,7 +5,7 @@ import java.util.Random;
  * The length of the array and the upper limit of random numbers are the same.
  * This algorithm uses System.nanoTime() to measure the running time (elapsed time).
  * @Author: João P. B. Szlachta
- * @Version: 1.0.0
+ * @Version: 2.0.0
  */
 public class SelectionSort {
         static Random random = new Random();
@@ -14,7 +14,8 @@ public class SelectionSort {
      * @param args
      */
         public static void main(String[] args) {
-            int tvs[] = {10, 50, 100, 250, 500, 750, 1000, 2500, 5000, 7500, 10000, 25000, 50000, 75000, 100000}; // testing values
+            int tvs[] = {10, 50, 100, 250, 500, 750, 1000, 2500, 5000, 7500,
+                    10000, 25000, 50000, 75000, 100000}; // testing values
             long rt[] = new long[tvs.length]; //running time
             int aux = 0;
 
@@ -36,7 +37,7 @@ public class SelectionSort {
     /**
      * This method sorts the array received in the param.
      * This method sorts using the selection sort algorithm.
-     * @param v
+     * @param v the array
      */
     public static void sort(int[] v){
             int minimum, aux;
@@ -58,7 +59,7 @@ public class SelectionSort {
 
     /**
      * This method gets the running time (elapsed time) of sorting method.
-     * @param v
+     * @param v the array
      * @return sorting method's running time
      */
     public static long getRT(int[] v){
@@ -71,8 +72,8 @@ public class SelectionSort {
     /**
      * This method fills the array with random numbers. The parameter 'vlength' is responsible for ensuring that
      * the array's length matches the limit value for 'random.nextInt'.
-     * @param v
-     * @param vlength
+     * @param v the array
+     * @param vlength the array length
      */
     public static void fillIn(int[] v, int vlength){
             for (int i = 0; i < v.length; i++) {
@@ -83,13 +84,13 @@ public class SelectionSort {
     /**
      * This method simply prints all the array's values in a single line with a space between each value.
      * Afterward, this method moves to the next line.
-     * @param v
+     * @param v the array
      */
     public static void show(int[] v){
             for (int i: v
             ) {
                 System.out.print(v[i] + " ");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
 }

@@ -5,7 +5,7 @@ import java.util.Random;
  * The length of the array and the upper limit of random numbers are the same.
  * This algorithm uses System.nanoTime() to measure the running time (elapsed time).
  * @Author: João P. B. Szlachta
- * @Version: 1.0.0
+ * @Version: 2.0.0
  */
 public class BubbleSort {
     static Random random = new Random();
@@ -37,7 +37,7 @@ public class BubbleSort {
     /**
      * This method sorts the array received in the param.
      * This method sorts using the bubble sort algorithm.
-     * @param v
+     * @param v the array
      */
     public static void sort(int[] v){
         for (int i = 0; i < v.length - 1; i++) {
@@ -58,7 +58,7 @@ public class BubbleSort {
 
     /**
      * This method gets the running time (elapsed time) of sorting method.
-     * @param v
+     * @param v the array
      * @return sorting method's running time
      */
     public static long getRT(int[] v){
@@ -71,8 +71,8 @@ public class BubbleSort {
     /**
      * This method fills the array with random numbers. The parameter 'vlength' is responsible for ensuring that
      * the array's length matches the limit value for 'random.nextInt'.
-     * @param v
-     * @param vlength
+     * @param v the array
+     * @param vlength the array length
      */
     public static void fillIn(int[] v, int vlength){
         for (int i = 0; i < v.length; i++) {
