@@ -1,9 +1,9 @@
 import java.util.Random;
 
 /**
- * This is an algorithm that sort an array using Bubble Sorting. The array is filled in with random numbers.
- * The array's length and the limit of random numbers are the same.
- * This algorithm use System.nanoTime() to measure the running time (elapsed time).
+ * This is an algorithm that sorts an array using Bubble Sort. The array is filled with random numbers.
+ * The length of the array and the upper limit of random numbers are the same.
+ * This algorithm uses System.nanoTime() to measure the running time (elapsed time).
  * @Author: João P. B. Szlachta
  * @Version: 1.0.0
  */
@@ -15,7 +15,7 @@ public class BubbleSort {
      * @param args
      */
     public static void main(String[] args) {
-        int tvs[] = {10, 50, 100, 500, 1000, 5000, 10000}; // testing values
+        int tvs[] = {10, 50, 100, 250, 500, 750, 1000, 2500, 5000, 7500, 10000}; // testing values
         long rt[] = new long[tvs.length]; //running time
         int aux = 0;
 
@@ -23,7 +23,7 @@ public class BubbleSort {
              ) {
             int v[] = new int[i];
             BubbleSort.fillIn(v, i);
-            rt[aux] = BubbleSort.gettingRT(v);
+            rt[aux] = BubbleSort.getRT(v);
             BubbleSort.show(v);
             System.out.println(rt[aux]);
             aux += 1;
@@ -39,7 +39,7 @@ public class BubbleSort {
      * This method sorts using the bubble sort algorithm.
      * @param v
      */
-    public static void sorting(int[] v){
+    public static void sort(int[] v){
         for (int i = 0; i < v.length - 1; i++) {
             boolean sorted = true;
             for (int j = i; j < v.length; j++) {
@@ -61,16 +61,16 @@ public class BubbleSort {
      * @param v
      * @return sorting method's running time
      */
-    public static long gettingRT(int[] v){
+    public static long getRT(int[] v){
         long start = System.nanoTime();
-        BubbleSort.sorting(v);
+        BubbleSort.sort(v);
         long end = System.nanoTime();
         return end - start;
     }
 
     /**
-     * This method fills in the array with random numbers. The param vlength is responsible to ensure that the array's length is the same number of
-     * the limit value for random.nextInt.
+     * This method fills the array with random numbers. The parameter 'vlength' is responsible for ensuring that
+     * the array's length matches the limit value for 'random.nextInt'.
      * @param v
      * @param vlength
      */
@@ -81,7 +81,8 @@ public class BubbleSort {
     }
 
     /**
-     * This method just print all the array's values in a line wih a space between one value and other. And after that, this method skip one line.
+     * This method simply prints all the array's values in a single line with a space between each value.
+     * Afterward, this method moves to the next line.
      * @param v
      */
     public static void show(int[] v){
