@@ -11,7 +11,7 @@ public class Util {
      * @param v
      * @param vlength
      */
-    public void fillIn(int[] v, int vlength){
+    protected void fillIn(int[] v, int vlength){
         for (int i = 0; i < v.length; i++) {
             v[i] = random.nextInt(vlength);
         }
@@ -28,6 +28,10 @@ public class Util {
             System.out.print(v[i] + " ");
         }
         System.out.println("");
+    }
+
+    public void showBlancSpace(){
+        System.out.println(" ");
     }
 
 
